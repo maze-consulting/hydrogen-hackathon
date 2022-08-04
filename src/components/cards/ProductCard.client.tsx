@@ -5,6 +5,7 @@ import {
   Link,
   Money,
   useMoney,
+  ModelViewer
 } from '@shopify/hydrogen';
 
 import {Text} from '~/components';

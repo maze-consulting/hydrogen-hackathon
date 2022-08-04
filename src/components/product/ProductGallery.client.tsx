@@ -58,10 +58,11 @@ export function ProductGallery({
           case 'MODEL_3D':
             mediaProps = {
               width: '100%',
-              interactionPromptThreshold: '0',
               ar: true,
               loading: ATTR_LOADING_EAGER,
-              disableZoom: true,
+              disableZoom: false,
+              touchAction: 'pan-x',
+              autoRotate: true
             };
             break;
         }
@@ -84,7 +85,7 @@ export function ProductGallery({
           >
             <MediaFile
               tabIndex="0"
-              className={`w-full h-full aspect-square fadeIn object-cover`}
+              className={`w-full h-full aspect-square fadeIn object-cover z-10`}
               data={data}
               sizes={
                 isFullWidth
